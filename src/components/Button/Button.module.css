@@ -1,0 +1,70 @@
+.button {
+	align-items: center;
+	appearance: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	max-height: 2.75rem;
+	max-width: 100%;
+	min-height: 2.75rem;
+	min-width: 2.75rem;
+	text-decoration: none;
+	width: fit-content;
+
+	&.primary {
+		background: #FFF;
+		border-radius: 0.5rem;
+		color: #1E000E;
+	}
+
+	&.primaryContrast {
+		background: #F4F2EF;
+		border-radius: 0.5rem;
+		color: #1E000E;
+	}
+
+	&.secondary {
+		background: #0A8754;
+		border-radius: 4rem;
+		color: #FFF;
+	}
+
+	&.tertiary {
+		background: #400F8F;
+		border-radius: 4rem;
+		color: #FFF;
+	}
+
+	@media (hover: hover) {
+		&.primary:hover {
+			background: #F4F2EF;
+		}
+
+		&.primaryContrast:hover {
+			background: #EAE6E1;
+		}
+
+		&.secondary:hover {
+			background: #086D44;
+		}
+
+		&.tertiary:hover {
+			background: #360C78;
+		}
+	}
+
+	svg {
+		display: block;
+	}
+
+	.buttonLabel {
+		display: block;
+		font-size: 1.125rem;
+		line-height: 1.25;
+		overflow: hidden;
+		padding: 0.75rem 1.25rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}

@@ -6,22 +6,22 @@ function App() {
   return (
     <>
 		<NavBar
-			links={[
+			items={[
 				{
 					name: 'Home',
 					link: './',
-					links: undefined,
+					subItems: undefined,
 				},
 				{
 					name: 'What we do',
 					link: './#WhatWeDo',
-					links: undefined,
+					subItems: undefined,
 
 				},
 				{
 					name: 'Our Services',
 					link: './#OurServices',
-					links: [
+					subItems: [
 						{
 							name: 'Project Management',
 							link: './project-management',
@@ -47,14 +47,13 @@ function App() {
 				{
 					name: 'Clients',
 					link: './#Clients',
-					links: undefined,
+					subItems: undefined,
 
 				},
 				{
 					name: 'Blog',
 					link: './blog',
-					links: undefined,
-
+					subItems: undefined,
 				},
 			]}
 		/>

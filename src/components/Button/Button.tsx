@@ -1,13 +1,15 @@
+import styles from './Button.module.css';
+
 interface ButtonProps {
-	icon?: string,
+	children?: React.ReactNode,
 	label?: string,
-	link: string,
-	onClick?: () => {},
-	style: 'primary' | 'secondary' | 'tertiary',
+	link?: string,
+	onClick?: () => void,
+	style: 'primary' | 'primaryContrast' | 'secondary' | 'tertiary',
 }
 
 const Button = ({
-	icon,
+	children,
 	label,
 	link,
 	onClick,
@@ -16,25 +18,21 @@ const Button = ({
 	return (
 		<>
 			{link ?
-				<a href={link} className={`button ${style}`}>
-					{icon &&
-						<span className="button-icon">
-							{icon}
-						</span>
-					}
+				<a href={link} className={`${styles.button} ${styles[style]}`}>
+					{children}
 					{label &&
-						<span className="button-label">{label}</span>
+						<span className={styles.buttonLabel}>
+							{label}
+						</span>
 					}
 				</a>
 			:
-				<button onClick={onClick} className={`button ${style}`}>
-					{icon &&
-						<span className="button-icon">
-							{icon}
-						</span>
-					}
+				<button onClick={onClick} className={`${styles.button} ${styles[style]}`}>
+					{children}
 					{label &&
-						<span className="button-label">{label}</span>
+						<span className={styles.buttonLabel}>
+							{label}
+						</span>
 					}
 				</button>
 			}

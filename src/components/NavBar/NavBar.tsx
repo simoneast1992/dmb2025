@@ -1,6 +1,9 @@
-// import style from './NavBar.module.css';
+import { useState } from 'react';
+import styles from './NavBar.module.css';
 
 import Button from "../Button/Button";
+import SVGClose from "../../images/svg/SVGClose";
+import SVGMenu from "../../images/svg/SVGMenu";
 
 interface LinksProps {
 	name: string,
@@ -10,43 +13,62 @@ interface LinksProps {
 interface LinkProps {
 	name: string,
 	link: string,
-	links: Array<LinksProps> | undefined;
+	subItems: Array<LinksProps> | undefined;
 }
 
 interface NavBarProps {
-	links: Array<LinkProps>;
+	items: Array<LinkProps>;
 }
 
 const NavBar = ({
-	links,
+	items,
 }: NavBarProps) => {
+	const [dropdownVisible, setDropdownVisible] = useState(false);
+	const [secondaryDropdownVisible, setSecondaryDropdownVisible] = useState(true);
+
 	return (
-		<nav>
+		<nav className={styles.navbar}>
 			{/* <Image link="./" /> */}
-			<ul>
-				{links.map((link) => {
-					return (
-						<>
-							<li>
-								<a href={link.link}>
-									{link.name}
-								</a>
-							</li>
-							{link.links !== undefined &&
-								<div>
-									{link.links.map((link) => {
-										return (
-											<a href={link.link}>
-												{link.name}
-											</a>
-										)
-									})}
-								</div>
-							}
-						</>
-					)
-				})}
-			</ul>
+			<Button
+				onClick={() => setDropdownVisible(!dropdownVisible)}
+				style="primaryContrast"
+			>
+				{dropdownVisible ?
+					<SVGClose />
+				:
+					<SVGMenu />
+				}
+			</Button>
+			{dropdownVisible &&
+				<ul>
+					{items.map((item) => {
+						return (
+							<>
+								<li>
+									<Button
+										link={item.link}
+										label={item.name}
+										style='primary'
+									/>
+								</li>
+								{secondaryDropdownVisible && item.subItems !== undefined &&
+									<div className={styles.navbarDropdown}>
+										{item.subItems.map((subItem) => {
+											return (
+												<Button
+													link={subItem.link}
+													label={subItem.name}
+													style='primary'
+												/>
+											)
+										})}
+									</div>
+								}
+							</>
+						)
+					})}
+				</ul>
+			}
 			<Button
 				label="Contact us"
 				link="./contact-us"

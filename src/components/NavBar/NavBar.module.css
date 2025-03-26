@@ -1,0 +1,29 @@
+.navbar {
+	align-items: center;
+	display: flex;
+	height: 5rem;
+	justify-content: space-between;
+	padding: 1rem;
+	position: relative;
+	width: 100vw;
+
+	ul {
+		background: #FFF;
+		border: 1px solid #F4F2EF;
+		border-radius: 0.75rem;
+		box-shadow: 0 4px 8px #0000001A;
+		display: flex;
+		flex-direction: column;
+		gap: 0.375rem;
+		list-style: none;
+		max-width: calc(100vw - 2rem);
+		overflow: hidden;
+		padding: 0.5rem;
+		position: absolute;
+		top: 5rem;
+	}
+
+	.navbarDropdown {
+		padding-inline-start: 1rem;
+	}
+}
