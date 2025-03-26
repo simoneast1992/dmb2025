@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import NavBar from './components/NavBar/NavBar';
+import './styles/style.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+		<NavBar
+			links={[
+				{
+					name: 'Home',
+					link: './',
+					links: undefined,
+				},
+				{
+					name: 'What we do',
+					link: './#WhatWeDo',
+					links: undefined,
+
+				},
+				{
+					name: 'Our Services',
+					link: './#OurServices',
+					links: [
+						{
+							name: 'Project Management',
+							link: './project-management',
+						},
+						{
+							name: 'Land Surveying & Site Engineering',
+							link: './land-surveying-and-site-engineering',
+						},
+						{
+							name: 'Design & Modelling',
+							link: './design-and-modelling',
+						},
+						{
+							name: 'Health & Safety',
+							link: './health-and-safety',
+						},
+						{
+							name: 'Training',
+							link: './training',
+						},
+					]
+				},
+				{
+					name: 'Clients',
+					link: './#Clients',
+					links: undefined,
+
+				},
+				{
+					name: 'Blog',
+					link: './blog',
+					links: undefined,
+
+				},
+			]}
+		/>
     </>
   )
-}
+};
 
-export default App
+export default App;
