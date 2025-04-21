@@ -67,6 +67,7 @@ const NavBar = ({
 										link={item.link}
 										label={item.name}
 										style='primary'
+										onClick={() => setDropdownVisible(false)}
 									/>
 									{item.subItems !== undefined &&
 										<div className={styles.navbarDropdownInner}>

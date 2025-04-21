@@ -20,7 +20,11 @@ const Button = ({
 	return (
 		<>
 			{link ?
-				<a href={link} className={`${styles.button} ${styles[style]} ${className}`}>
+				<a
+					href={link}
+					onClick={onClick}
+					className={`${styles.button} ${styles[style]} ${className}`}
+				>
 					{label &&
 						<span className={styles.buttonLabel}>
 							{label}
