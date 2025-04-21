@@ -52,9 +52,9 @@
 			position: relative;
 
 			&:hover .navbarDropdownDesktopWrapper,
-			&:focus-within .navbarDropdownDesktopWrapper,
+			&:focus-visible-within .navbarDropdownDesktopWrapper,
 			a:hover + .navbarDropdownDesktopWrapper,
-			a:focus + .navbarDropdownDesktopWrapper {
+			a:focus-visible + .navbarDropdownDesktopWrapper {
 				display: flex;
 				z-index: 2;
 			}
