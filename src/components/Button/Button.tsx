@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const Button = ({
 	children,
-	className,
+	className = '',
 	label,
 	link,
 	onClick,

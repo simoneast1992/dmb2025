@@ -1,0 +1,30 @@
+:root {
+	--black: #1E000E;
+	--green-01: #0A8754;
+	--green-02: #086D44;;
+	--grey-01: #F4F2EF;
+	--grey-02: #EAE6E1;
+	--purple-01: #400F8F;
+	--purple-02: #360C78;
+	--shadow: #0000001A;
+	--white: #FFF;
+
+	/* Button */
+	--button-primary-background: var(--white);
+	--button-primary-background-hover: var(--grey-01);
+	--button-primary-color: var(--black);
+	--button-primary-contrast-background: var(--grey-01);
+	--button-primary-contrast-background-hover: var(--grey-02);
+	--button-primary-contrast-color: var(--black);
+	--button-secondary-background: var(--green-01);
+	--button-secondary-background-hover: var(--green-02);
+	--button-secondary-color: var(--white);
+	--button-tertiary-background: var(--purple-01);
+	--button-tertiary-background-hover: var(--purple-02);
+	--button-tertiary-color: var(--white);
+
+	/* Navbar */
+	--navbar-background: var(--white);
+	--navbar-border: var(--grey-01);
+	--navbar-shadow: var(--shadow);
+}

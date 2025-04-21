@@ -1,3 +1,5 @@
+@import '../../styles/variables/colors.css';
+
 .button {
 	align-items: center;
 	appearance: none;
@@ -13,44 +15,44 @@
 	width: fit-content;
 
 	&.primary {
-		background: #FFF;
+		background: var(--button-primary-background);
 		border-radius: 0.5rem;
-		color: #1E000E;
+		color: var(--button-primary-color);
 	}
 
 	&.primaryContrast {
-		background: #F4F2EF;
+		background: var(--button-primary-contrast-background);
 		border-radius: 0.5rem;
-		color: #1E000E;
+		color: var(--button-primary-contrast-color);
 	}
 
 	&.secondary {
-		background: #0A8754;
+		background: var(--button-secondary-background);
 		border-radius: 4rem;
-		color: #FFF;
+		color: var(--button-secondary-color);
 	}
 
 	&.tertiary {
-		background: #400F8F;
+		background: var(--button-tertiary-background);
 		border-radius: 4rem;
-		color: #FFF;
+		color: var(--button-tertiary-color);
 	}
 
 	@media (hover: hover) {
 		&.primary:hover {
-			background: #F4F2EF;
+			background: var(--button-primary-background-hover);
 		}
 
 		&.primaryContrast:hover {
-			background: #EAE6E1;
+			background: var(--button-primary-contrast-background-hover);
 		}
 
 		&.secondary:hover {
-			background: #086D44;
+			background: var(--button-secondary-background-hover);
 		}
 
 		&.tertiary:hover {
-			background: #360C78;
+			background: var(--button-tertiary-background-hover);
 		}
 	}
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './NavBar.module.css';
 
 import Button from "../Button/Button";
@@ -26,7 +26,17 @@ const NavBar = ({
 	items,
 }: NavBarProps) => {
 	const [dropdownVisible, setDropdownVisible] = useState(false);
-	const [secondaryDropdownVisible, setSecondaryDropdownVisible] = useState(true);
+
+	// Collapse dropdown if you get to desktop width
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth >= 1024) {
+				setDropdownVisible(false);
+			}
+		}
+
+		window.addEventListener('resize', handleResize);
+	}, []);
 
 	return (
 		<nav className={styles.navbar}>
@@ -58,7 +68,7 @@ const NavBar = ({
 										style='primary'
 									/>
 								</li>
-								{secondaryDropdownVisible && item.subItems !== undefined &&
+								{item.subItems !== undefined &&
 									<div className={styles.navbarDropdownInner}>
 										{item.subItems.map((subItem) => {
 											return (
