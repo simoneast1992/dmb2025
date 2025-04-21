@@ -57,33 +57,36 @@ const NavBar = ({
 				}
 			/>
 			{dropdownVisible &&
-				<ul className={styles.navbarDropdown}>
-					{items.map((item) => {
-						return (
-							<li key={item.name}>
-								<Button
-									link={item.link}
-									label={item.name}
-									style='primary'
-								/>
-								{item.subItems !== undefined &&
-									<div className={styles.navbarDropdownInner}>
-										{item.subItems.map((subItem) => {
-											return (
-												<Button
-													link={subItem.link}
-													label={subItem.name}
-													style='primary'
-													key={subItem.name}
-												/>
-											)
-										})}
-									</div>
-								}
-							</li>
-						)
-					})}
-				</ul>
+				<>
+					<span className={styles.navbarDropdownOutside} onClick={() => setDropdownVisible(false)}/>
+					<ul className={styles.navbarDropdown}>
+						{items.map((item) => {
+							return (
+								<li key={item.name}>
+									<Button
+										link={item.link}
+										label={item.name}
+										style='primary'
+									/>
+									{item.subItems !== undefined &&
+										<div className={styles.navbarDropdownInner}>
+											{item.subItems.map((subItem) => {
+												return (
+													<Button
+														link={subItem.link}
+														label={subItem.name}
+														style='primary'
+														key={subItem.name}
+													/>
+												)
+											})}
+										</div>
+									}
+								</li>
+							)
+						})}
+					</ul>
+				</>
 			}
 			<ul className={styles.navbarLinks}>
 				{items.map((item) => {

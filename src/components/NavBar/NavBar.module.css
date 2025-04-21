@@ -18,6 +18,14 @@
 		margin-inline-end: auto;
 	}
 
+	.navbarDropdownOutside {
+		height: 100vh;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100vw;
+	}
+
 	.navbarDropdown {
 		background: var(--navbar-background);
 		border: 1px solid var(--navbar-border);
