@@ -3,7 +3,7 @@
 .button {
 	align-items: center;
 	appearance: none;
-	border: none;
+	border: 2px solid var(--button-border);
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
@@ -11,8 +11,27 @@
 	max-width: 100%;
 	min-height: 2.75rem;
 	min-width: 2.75rem;
+	position: relative;
 	text-decoration: none;
 	width: fit-content;
+
+	&:has(svg):has(span) {
+		.buttonLabel {
+			padding: 0.75rem 0.25rem 0.75rem 1.25rem;
+
+		}
+
+		svg {
+			margin-right: 0.75rem;
+		}
+	}
+
+	&:focus {
+		z-index: 1;
+		outline: none;
+		border-color: var(--button-border-focus);
+		box-shadow: 0 0 0 4px var(--button-shadow-focus);
+	}
 
 	&.primary {
 		background: var(--button-primary-background);
@@ -38,7 +57,7 @@
 		color: var(--button-tertiary-color);
 	}
 
-	@media (hover: hover) {
+	@media (hover) {
 		&.primary:hover {
 			background: var(--button-primary-background-hover);
 		}
@@ -63,7 +82,6 @@
 	.buttonLabel {
 		display: block;
 		font-size: 1.125rem;
-		/* line-height: 1.25; */
 		overflow: hidden;
 		padding: 0.75rem 1.25rem;
 		text-overflow: ellipsis;

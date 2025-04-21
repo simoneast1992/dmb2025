@@ -7,18 +7,27 @@
 	--purple-01: #400F8F;
 	--purple-02: #360C78;
 	--shadow: #0000001A;
+	--transparent: transparent;
 	--white: #FFF;
+	--yellow: #ffd500;
 
 	/* Button */
+	--button-border: var(--transparent);
+	--button-border-focus: var(--black);
+	--button-shadow-focus: var(--yellow);
+
 	--button-primary-background: var(--white);
 	--button-primary-background-hover: var(--grey-01);
 	--button-primary-color: var(--black);
+
 	--button-primary-contrast-background: var(--grey-01);
 	--button-primary-contrast-background-hover: var(--grey-02);
 	--button-primary-contrast-color: var(--black);
+
 	--button-secondary-background: var(--green-01);
 	--button-secondary-background-hover: var(--green-02);
 	--button-secondary-color: var(--white);
+
 	--button-tertiary-background: var(--purple-01);
 	--button-tertiary-background-hover: var(--purple-02);
 	--button-tertiary-color: var(--white);

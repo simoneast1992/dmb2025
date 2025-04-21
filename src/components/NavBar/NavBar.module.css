@@ -5,10 +5,10 @@
 	display: flex;
 	height: auto;
 	justify-content: space-between;
+	overflow: visible;
 	padding: 1rem;
 	position: relative;
 	width: 100vw;
-	/* transition: padding 0.3s; */
 
 	.navbarLogo {
 		display: none;
@@ -26,7 +26,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.375rem;
-		list-style: none;
 		max-width: calc(100vw - 2rem);
 		overflow: hidden;
 		padding: 0.5rem;
@@ -40,6 +39,18 @@
 
 	.navbarLinks {
 		display: none;
+
+		li {
+			position: relative;
+
+			&:hover .navbarDropdownDesktopWrapper,
+			&:focus-within .navbarDropdownDesktopWrapper,
+			a:hover + .navbarDropdownDesktopWrapper,
+			a:focus + .navbarDropdownDesktopWrapper {
+				display: flex;
+				z-index: 2;
+			}
+		}
 	}
 }
 
@@ -77,8 +88,28 @@
 			gap: 0.375rem;
 			list-style: none;
 			max-width: calc(100vw - 2rem);
-			overflow: hidden;
 			padding: 0.5rem;
+		}
+
+		.navbarDropdownDesktopWrapper {
+			display: none;
+			left: 50%;
+			padding-block-start: 0.375rem;
+			position: absolute;
+			top: 2.625rem;
+			transform: translate(-50%, 0);
+
+			.navbarDropdownDesktop {
+				background: var(--navbar-background);
+				border: 1px solid var(--navbar-border);
+				border-radius: 0.75rem;
+				box-shadow: 0 4px 8px var(--navbar-shadow);
+				flex-direction: column;
+				gap: 0.375rem;
+				max-width: calc(100vw - 2rem);
+				overflow: hidden;
+				padding: 0.5rem;
+			}
 		}
 	}
 }

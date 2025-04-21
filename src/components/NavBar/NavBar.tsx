@@ -6,6 +6,7 @@ import SVGClose from "../../images/svg/SVGClose";
 import SVGMenu from "../../images/svg/SVGMenu";
 
 import DMBLogo from "../../images/dmb-logo.png";
+import SVGDropdown from '../../images/svg/SVGDropdown';
 
 interface LinksProps {
 	name: string,
@@ -49,13 +50,12 @@ const NavBar = ({
 				className={styles.navbarButton}
 				onClick={() => setDropdownVisible(!dropdownVisible)}
 				style="primaryContrast"
-			>
-				{dropdownVisible ?
+				icon={dropdownVisible ?
 					<SVGClose />
 				:
 					<SVGMenu />
 				}
-			</Button>
+			/>
 			{dropdownVisible &&
 				<ul className={styles.navbarDropdown}>
 					{items.map((item) => {
@@ -94,7 +94,25 @@ const NavBar = ({
 								link={item.link}
 								label={item.name}
 								style='primary'
+								icon={item.name === 'Our Services' &&
+									<SVGDropdown />
+								}
 							/>
+							{item.subItems !== undefined &&
+								<div className={styles.navbarDropdownDesktopWrapper}>
+									<div className={styles.navbarDropdownDesktop}>
+										{item.subItems.map((subItem) => {
+											return (
+												<Button
+													link={subItem.link}
+													label={subItem.name}
+													style='primary'
+												/>
+											)
+										})}
+									</div>
+								</div>
+							}
 						</li>
 					)
 				}

@@ -1,8 +1,8 @@
 import styles from './Button.module.css';
 
 interface ButtonProps {
-	children?: React.ReactNode,
 	className?: string,
+	icon?: React.ReactNode,
 	label?: string,
 	link?: string,
 	onClick?: () => void,
@@ -10,8 +10,8 @@ interface ButtonProps {
 }
 
 const Button = ({
-	children,
 	className = '',
+	icon,
 	label,
 	link,
 	onClick,
@@ -21,21 +21,21 @@ const Button = ({
 		<>
 			{link ?
 				<a href={link} className={`${styles.button} ${styles[style]} ${className}`}>
-					{children}
 					{label &&
 						<span className={styles.buttonLabel}>
 							{label}
 						</span>
 					}
+					{icon}
 				</a>
 			:
 				<button onClick={onClick} className={`${styles.button} ${styles[style]} ${className}`}>
-					{children}
 					{label &&
 						<span className={styles.buttonLabel}>
 							{label}
 						</span>
 					}
+					{icon}
 				</button>
 			}
 		</>
