@@ -1,13 +1,22 @@
 .navbar {
 	align-items: center;
 	display: flex;
-	height: 5rem;
+	height: auto;
 	justify-content: space-between;
 	padding: 1rem;
 	position: relative;
 	width: 100vw;
+	/* transition: padding 0.3s; */
 
-	ul {
+	.navbarLogo {
+		display: none;
+	}
+
+	.navbarButton {
+		margin-inline-end: auto;
+	}
+
+	.navbarDropdown {
 		background: #FFF;
 		border: 1px solid #F4F2EF;
 		border-radius: 0.75rem;
@@ -20,10 +29,55 @@
 		overflow: hidden;
 		padding: 0.5rem;
 		position: absolute;
-		top: 5rem;
+		top: 4.5rem;
 	}
 
-	.navbarDropdown {
+	.navbarDropdownInner {
 		padding-inline-start: 1rem;
+	}
+
+	.navbarLinks {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.navbar {
+		padding: 1.5rem;
+
+		.navbarLogo {
+			display: block;
+			height: 2.75rem;
+			padding-inline-end: 1rem;
+		}
+
+		.navbarDropdown {
+			left: 135px;
+			top: 5rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.navbar {
+		padding: 2rem;
+
+		.navbarButton {
+			display: none;
+		}
+
+		.navbarDropdown {
+			display: none;
+		}
+
+		.navbarLinks {
+			background: #FFF;
+			display: flex;
+			gap: 0.375rem;
+			list-style: none;
+			max-width: calc(100vw - 2rem);
+			overflow: hidden;
+			padding: 0.5rem;
+		}
 	}
 }

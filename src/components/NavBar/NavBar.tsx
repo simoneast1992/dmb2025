@@ -5,6 +5,8 @@ import Button from "../Button/Button";
 import SVGClose from "../../images/svg/SVGClose";
 import SVGMenu from "../../images/svg/SVGMenu";
 
+import DMBLogo from "../../images/dmb-logo.png";
+
 interface LinksProps {
 	name: string,
 	link: string,
@@ -28,8 +30,13 @@ const NavBar = ({
 
 	return (
 		<nav className={styles.navbar}>
-			{/* <Image link="./" /> */}
+			<img
+				className={styles.navbarLogo}
+				src={DMBLogo}
+				alt="DMB Consulta Service (UK) Logo"
+			/>
 			<Button
+				className={styles.navbarButton}
 				onClick={() => setDropdownVisible(!dropdownVisible)}
 				style="primaryContrast"
 			>
@@ -40,7 +47,7 @@ const NavBar = ({
 				}
 			</Button>
 			{dropdownVisible &&
-				<ul>
+				<ul className={styles.navbarDropdown}>
 					{items.map((item) => {
 						return (
 							<>
@@ -52,7 +59,7 @@ const NavBar = ({
 									/>
 								</li>
 								{secondaryDropdownVisible && item.subItems !== undefined &&
-									<div className={styles.navbarDropdown}>
+									<div className={styles.navbarDropdownInner}>
 										{item.subItems.map((subItem) => {
 											return (
 												<Button
@@ -69,6 +76,20 @@ const NavBar = ({
 					})}
 				</ul>
 			}
+			<ul className={styles.navbarLinks}>
+				{items.map((item) => {
+					return (
+						<li key={item.name}>
+							<Button
+								link={item.link}
+								label={item.name}
+								style='primary'
+							/>
+						</li>
+					)
+				}
+				)}
+			</ul>
 			<Button
 				label="Contact us"
 				link="./contact-us"
