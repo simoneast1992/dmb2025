@@ -60,14 +60,12 @@ const NavBar = ({
 				<ul className={styles.navbarDropdown}>
 					{items.map((item) => {
 						return (
-							<>
-								<li>
-									<Button
-										link={item.link}
-										label={item.name}
-										style='primary'
-									/>
-								</li>
+							<li key={item.name}>
+								<Button
+									link={item.link}
+									label={item.name}
+									style='primary'
+								/>
 								{item.subItems !== undefined &&
 									<div className={styles.navbarDropdownInner}>
 										{item.subItems.map((subItem) => {
@@ -76,12 +74,13 @@ const NavBar = ({
 													link={subItem.link}
 													label={subItem.name}
 													style='primary'
+													key={subItem.name}
 												/>
 											)
 										})}
 									</div>
 								}
-							</>
+							</li>
 						)
 					})}
 				</ul>
@@ -107,6 +106,7 @@ const NavBar = ({
 													link={subItem.link}
 													label={subItem.name}
 													style='primary'
+													key={subItem.name}
 												/>
 											)
 										})}
