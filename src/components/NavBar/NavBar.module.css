@@ -119,5 +119,11 @@
 				padding: 0.5rem;
 			}
 		}
+
+		.navbarLinkDropdown:focus-within .navbarDropdownDesktopWrapper,
+		.navbarLinkDropdown > a:hover + .navbarDropdownDesktopWrapper,
+		.navbarDropdownDesktopWrapper:hover {
+			display: flex;
+		}
 	}
 }

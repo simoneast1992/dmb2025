@@ -92,7 +92,7 @@ const NavBar = ({
 			<ul className={styles.navbarLinks}>
 				{items.map((item) => {
 					return (
-						<li key={item.name}>
+						<li key={item.name} className={item.link === './#OurServices' ? `${styles.navbarLinkDropdown}` : ''}>
 							<Button
 								link={item.link}
 								label={item.name}
