@@ -16,6 +16,7 @@
 
 	.navbarButton {
 		margin-inline-end: auto;
+		z-index: 2;
 	}
 
 	.navbarDropdownOutside {
@@ -24,6 +25,7 @@
 		position: absolute;
 		top: 0;
 		width: 100vw;
+		z-index: 1;
 	}
 
 	.navbarDropdown {
@@ -39,6 +41,7 @@
 		padding: 0.5rem;
 		position: absolute;
 		top: 4.5rem;
+		z-index: 2;
 	}
 
 	.navbarDropdownInner {
