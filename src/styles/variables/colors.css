@@ -36,4 +36,7 @@
 	--navbar-background: var(--white);
 	--navbar-border: var(--grey-01);
 	--navbar-shadow: var(--shadow);
+
+	/* Main */
+	--main-background: var(--grey-01);
 }

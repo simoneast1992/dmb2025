@@ -1,7 +1,9 @@
 const HealthAndSafety = () => {
 	return (
 		<main>
-			<h1>Health & Safety</h1>
+			<section>
+				<h1>Health & Safety</h1>
+			</section>
 		</main>
 	)
 }

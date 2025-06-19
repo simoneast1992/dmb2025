@@ -1,7 +1,9 @@
 const Training = () => {
 	return (
 		<main>
-			<h1>Training</h1>
+			<section>
+				<h1>Training</h1>
+			</section>
 		</main>
 	)
 }

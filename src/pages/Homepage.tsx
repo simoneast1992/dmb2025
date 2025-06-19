@@ -1,7 +1,12 @@
 const Homepage = () => {
 	return (
 		<main>
-			<h1>Homepage</h1>
+			<section>
+				<h1>Homepage</h1>
+			</section>
+			<aside>
+				<img />
+			</aside>
 		</main>
 	)
 }

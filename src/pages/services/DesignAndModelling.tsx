@@ -1,7 +1,9 @@
 const DesignAndModelling = () => {
 	return (
 		<main>
-			<h1>Design & Modelling</h1>
+			<section>
+				<h1>Design & Modelling</h1>
+			</section>
 		</main>
 	)
 }

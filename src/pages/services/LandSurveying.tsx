@@ -1,7 +1,9 @@
 const LandSurveying = () => {
 	return (
 		<main>
-			<h1>Land Surveying & Site Engineering</h1>
+			<section>
+				<h1>Land Surveying & Site Engineering</h1>
+			</section>
 		</main>
 	)
 }

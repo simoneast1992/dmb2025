@@ -1,7 +1,9 @@
 const ProjectManagement = () => {
 	return (
 		<main>
-			<h1>Project Management</h1>
+			<section>
+				<h1>Project Management</h1>
+			</section>
 		</main>
 	)
 }

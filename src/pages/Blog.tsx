@@ -1,7 +1,9 @@
 const Blog = () => {
 	return (
 		<main>
-			<h1>Blog</h1>
+			<section>
+				<h1>Blog</h1>
+			</section>
 		</main>
 	)
 }
