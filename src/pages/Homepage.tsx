@@ -1,12 +1,14 @@
 const Homepage = () => {
 	return (
 		<main>
-			<section>
-				<h1>Homepage</h1>
-			</section>
 			<aside>
 				<img />
 			</aside>
+			<section>
+				<div className="content-block">
+					<h1>Homepage</h1>
+				</div>
+			</section>
 		</main>
 	)
 }

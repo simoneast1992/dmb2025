@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import DesignAndModelling from './pages/services/DesignAndModelling';
 import HealthAndSafety from './pages/services/HealthAndSafety';
 import Training from './pages/services/Training';
+import Contact from './pages/Contact';
 
 function App() {
 
@@ -63,7 +64,7 @@ function App() {
 					name: 'Blog',
 					link: './blog',
 					subItems: undefined,
-				},
+				}
 			]}
 		/>
 		<BrowserRouter>
@@ -75,6 +76,7 @@ function App() {
 				<Route path='health-and-safety' element={<HealthAndSafety />} />
 				<Route path='training' element={<Training />} />
 				<Route path='blog' element={<Blog />} />
+				<Route path='contact-us' element={<Contact />} />
 				<Route path='*' element={<NoPage />} />
 			</Routes>
 		</BrowserRouter>
