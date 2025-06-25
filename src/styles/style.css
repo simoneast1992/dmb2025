@@ -56,7 +56,6 @@ body {
 			flex-direction: column;
 			flex-grow: 1;
 			overflow-y: auto;
-			padding: 3vw;
 
 			.content-block {
 				align-items: start;
@@ -68,17 +67,18 @@ body {
 				padding: 6vw 10vw 6vw;
 				width: 100%;
 
-				&:first-child:not(:last-child):not(:only-child) {
+				&:first-of-type:not(:last-of-type):not(:only-of-type) {
 					padding: 10vw 10vw 6vw;
 				}
 
-				&:only-child {
+				&:only-of-type {
 					padding: 10vw;
 				}
 
-				/* &:last-child:not(:first-child):not(:only-child) {
+				&:last-of-type:not(:first-of-type):not(:only-of-type) {
 					padding: 6vw 10vw 10vw;
-				} */
+				}
+
 			}
 		}
 	}

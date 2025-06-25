@@ -16,6 +16,7 @@ interface LinksProps {
 interface LinkProps {
 	name: string,
 	link: string,
+	linkType: 'default' | 'hash' | 'nav' | 'navHash',
 	subItems: Array<LinksProps> | undefined;
 }
 
@@ -65,6 +66,7 @@ const NavBar = ({
 								<li key={item.name}>
 									<Button
 										link={item.link}
+										linkType={item.linkType}
 										label={item.name}
 										style='primary'
 										onClick={() => setDropdownVisible(false)}
@@ -75,6 +77,7 @@ const NavBar = ({
 												return (
 													<Button
 														link={subItem.link}
+														linkType='default'
 														label={subItem.name}
 														style='primary'
 														key={subItem.name}
@@ -95,6 +98,7 @@ const NavBar = ({
 						<li key={item.name} className={item.link === './#OurServices' ? `${styles.navbarLinkDropdown}` : ''}>
 							<Button
 								link={item.link}
+								linkType={item.linkType}
 								label={item.name}
 								style='primary'
 								icon={item.name === 'Our Services' &&
@@ -108,6 +112,7 @@ const NavBar = ({
 											return (
 												<Button
 													link={subItem.link}
+													linkType='default'
 													label={subItem.name}
 													style='primary'
 													key={subItem.name}
@@ -125,6 +130,7 @@ const NavBar = ({
 			<Button
 				label="Contact us"
 				link="./contact-us"
+				linkType='default'
 				style="secondary"
 			/>
 		</nav>

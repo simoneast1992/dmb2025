@@ -34,14 +34,17 @@
 	--button-tertiary-background-hover: var(--purple-02);
 	--button-tertiary-color: var(--white);
 
-	/* Navbar */
-	--navbar-background: var(--white);
-	--navbar-border: var(--grey-01);
-	--navbar-shadow: var(--shadow);
+	/* Footer */
+	--footer-background: var(--grey-02);
 
 	/* Main */
 	--main-background: var(--grey-01);
 	--main-border: var(--grey-02);
+
+	/* Navbar */
+	--navbar-background: var(--white);
+	--navbar-border: var(--grey-01);
+	--navbar-shadow: var(--shadow);
 
 	/* Text */
 	--h1-color: var(--purple-03);

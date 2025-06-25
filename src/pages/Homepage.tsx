@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import DMBLogo from "../images/dmb-logo.png";
 
 const Homepage = () => {
@@ -34,6 +35,7 @@ const Homepage = () => {
 						We provide the specialised security and support that form the foundation of any development project, ensuring that each phase is executed with precision and confidence. With a wide range of expert knowledge, DMB Consultant Services excels in offering practical, hands-on advice throughout the entire lifecycle of a project. Our approach is tailored individually to suit the specific needs of each Client, ensuring that solutions are both effective and adaptable. From initial planning and feasibility studies to on-site execution and final assessments, we work closely with our Clients to navigate challenges, optimise resources, and deliver sustainable, compliant, and high-performing outcomes.
 					</p>
 				</div>
+				<Footer />
 			</section>
 		</main>
 	)

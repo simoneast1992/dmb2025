@@ -14,6 +14,7 @@ h1 {
 	line-height: 3.25rem;
 	margin-block-end: 1.5rem;
 	color: var(--h1-color);
+	text-wrap: balance;
 }
 
 h2 {

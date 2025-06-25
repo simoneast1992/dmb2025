@@ -1,3 +1,5 @@
+import { Link, NavLink } from 'react-router';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 import styles from './Button.module.css';
 
 interface ButtonProps {
@@ -5,6 +7,7 @@ interface ButtonProps {
 	icon?: React.ReactNode,
 	label?: string,
 	link?: string,
+	linkType?: 'default' | 'hash' | 'nav' | 'navHash',
 	onClick?: () => void,
 	style: 'primary' | 'primaryContrast' | 'secondary' | 'tertiary',
 }
@@ -14,24 +17,75 @@ const Button = ({
 	icon,
 	label,
 	link,
+	linkType = 'default',
 	onClick,
 	style,
 }: ButtonProps) => {
 	return (
 		<>
 			{link ?
-				<a
-					href={link}
-					onClick={onClick}
-					className={`${styles.button} ${styles[style]} ${className}`}
-				>
-					{label &&
-						<span className={styles.buttonLabel}>
-							{label}
-						</span>
-					}
-					{icon}
-				</a>
+				<>
+					<>
+						{linkType === 'hash' &&
+							<HashLink to={link} className={`${styles.button} ${styles[style]} ${className}`}>
+								{label &&
+									<span className={styles.buttonLabel}>
+										{label}
+									</span>
+								}
+								{icon}
+							</HashLink>
+						}
+					</>
+					<>
+						{linkType === 'nav' &&
+							<NavLink
+								to={link}
+								onClick={onClick}
+								className={`${styles.button} ${styles[style]} ${className}`}
+							>
+								{label &&
+									<span className={styles.buttonLabel}>
+										{label}
+									</span>
+								}
+								{icon}
+							</NavLink>
+						}
+					</>
+					<>
+						{linkType === 'default' &&
+							<Link
+								to={link}
+								onClick={onClick}
+								className={`${styles.button} ${styles[style]} ${className}`}
+							>
+								{label &&
+									<span className={styles.buttonLabel}>
+										{label}
+									</span>
+								}
+								{icon}
+							</Link>
+						}
+					</>
+					<>
+						{linkType === 'navHash' &&
+							<NavHashLink
+								to={link}
+								onClick={onClick}
+								className={`${styles.button} ${styles[style]} ${className}`}
+							>
+								{label &&
+									<span className={styles.buttonLabel}>
+										{label}
+									</span>
+								}
+								{icon}
+							</NavHashLink>
+						}
+					</>
+				</>
 			:
 				<button onClick={onClick} className={`${styles.button} ${styles[style]} ${className}`}>
 					{label &&
@@ -47,3 +101,5 @@ const Button = ({
 }
 
 export default Button;
+
+

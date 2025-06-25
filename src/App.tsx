@@ -1,5 +1,5 @@
 import NavBar from './components/NavBar/NavBar';
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router";
 import './styles/style.css';
 import Homepage from './pages/Homepage';
 import ProjectManagement from './pages/services/ProjectManagement';
@@ -15,59 +15,65 @@ function App() {
 
   return (
     <>
-		<NavBar
-			items={[
-				{
-					name: 'Home',
-					link: './',
-					subItems: undefined,
-				},
-				{
-					name: 'What we do',
-					link: './#WhatWeDo',
-					subItems: undefined,
 
-				},
-				{
-					name: 'Our Services',
-					link: './#OurServices',
-					subItems: [
-						{
-							name: 'Project Management',
-							link: './project-management',
-						},
-						{
-							name: 'Land Surveying & Site Engineering',
-							link: './land-surveying-and-site-engineering',
-						},
-						{
-							name: 'Design & Modelling',
-							link: './design-and-modelling',
-						},
-						{
-							name: 'Health & Safety',
-							link: './health-and-safety',
-						},
-						{
-							name: 'Training',
-							link: './training',
-						},
-					]
-				},
-				{
-					name: 'Clients',
-					link: './#Clients',
-					subItems: undefined,
-
-				},
-				{
-					name: 'Blog',
-					link: './blog',
-					subItems: undefined,
-				}
-			]}
-		/>
 		<BrowserRouter>
+			<NavBar
+				items={[
+					{
+						name: 'Home',
+						link: './',
+						linkType: 'nav',
+						subItems: undefined,
+					},
+					{
+						name: 'What we do',
+						link: './#WhatWeDo',
+						linkType: 'navHash',
+						subItems: undefined,
+
+					},
+					{
+						name: 'Our Services',
+						link: './#OurServices',
+						linkType: 'navHash',
+						subItems: [
+							{
+								name: 'Project Management',
+								link: './project-management',
+							},
+							{
+								name: 'Land Surveying & Site Engineering',
+								link: './land-surveying-and-site-engineering',
+							},
+							{
+								name: 'Design & Modelling',
+								link: './design-and-modelling',
+							},
+							{
+								name: 'Health & Safety',
+								link: './health-and-safety',
+							},
+							{
+								name: 'Training',
+								link: './training',
+							},
+						]
+					},
+					{
+						name: 'Clients',
+						link: './#Clients',
+						linkType: 'navHash',
+						subItems: undefined,
+
+					},
+					{
+						name: 'Blog',
+						link: './blog',
+						linkType: 'nav',
+						subItems: undefined,
+					}
+				]}
+			/>
 			<Routes>
 				<Route index element={<Homepage />} />
 				<Route path='project-management' element={<ProjectManagement />} />
