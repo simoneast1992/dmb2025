@@ -77,7 +77,7 @@ const NavBar = ({
 												return (
 													<Button
 														link={subItem.link}
-														linkType='default'
+														linkType='nav'
 														label={subItem.name}
 														style='primary'
 														key={subItem.name}
@@ -112,7 +112,7 @@ const NavBar = ({
 											return (
 												<Button
 													link={subItem.link}
-													linkType='default'
+													linkType='nav'
 													label={subItem.name}
 													style='primary'
 													key={subItem.name}
@@ -130,7 +130,7 @@ const NavBar = ({
 			<Button
 				label="Contact us"
 				link="./contact-us"
-				linkType='default'
+				linkType='nav'
 				style="secondary"
 			/>
 		</nav>

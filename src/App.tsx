@@ -1,5 +1,5 @@
 import NavBar from './components/NavBar/NavBar';
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 import './styles/style.css';
 import Homepage from './pages/Homepage';
 import ProjectManagement from './pages/services/ProjectManagement';
@@ -22,7 +22,7 @@ function App() {
 					{
 						name: 'Home',
 						link: './',
-						linkType: 'nav',
+						linkType: 'default',
 						subItems: undefined,
 					},
 					{

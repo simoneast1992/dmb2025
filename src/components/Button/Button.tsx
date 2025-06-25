@@ -39,11 +39,7 @@ const Button = ({
 					</>
 					<>
 						{linkType === 'nav' &&
-							<NavLink
-								to={link}
-								onClick={onClick}
-								className={`${styles.button} ${styles[style]} ${className}`}
-							>
+							<NavLink to={link} className={`${styles.button} ${styles[style]} ${className}`}>
 								{label &&
 									<span className={styles.buttonLabel}>
 										{label}
@@ -55,11 +51,7 @@ const Button = ({
 					</>
 					<>
 						{linkType === 'default' &&
-							<Link
-								to={link}
-								onClick={onClick}
-								className={`${styles.button} ${styles[style]} ${className}`}
-							>
+							<Link to={link} className={`${styles.button} ${styles[style]} ${className}`}>
 								{label &&
 									<span className={styles.buttonLabel}>
 										{label}
@@ -71,11 +63,7 @@ const Button = ({
 					</>
 					<>
 						{linkType === 'navHash' &&
-							<NavHashLink
-								to={link}
-								onClick={onClick}
-								className={`${styles.button} ${styles[style]} ${className}`}
-							>
+							<NavHashLink to={link} className={`${styles.button} ${styles[style]} ${className}`}>
 								{label &&
 									<span className={styles.buttonLabel}>
 										{label}
