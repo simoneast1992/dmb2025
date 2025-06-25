@@ -5,7 +5,9 @@ const Homepage = () => {
 	return (
 		<main>
 			<aside>
-				<img />
+				<div className="image-gallery">
+
+				</div>
 			</aside>
 			<section>
 				<div className="content-block">
