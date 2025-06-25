@@ -7,6 +7,7 @@
 	padding: 1rem;
 	position: relative;
 	width: 100vw;
+	z-index: var(--navbar-z);
 
 	.navbarLogo {
 		display: none;
@@ -14,7 +15,7 @@
 
 	.navbarButton {
 		margin-inline-end: auto;
-		z-index: 2;
+		z-index: var(--navbar-button-z);
 	}
 
 	.navbarDropdownOutside {
@@ -23,7 +24,7 @@
 		position: absolute;
 		top: 0;
 		width: 100vw;
-		z-index: 1;
+		z-index: var(--navbar-outside-z);
 	}
 
 	.navbarDropdown {
@@ -39,7 +40,7 @@
 		padding: 0.5rem;
 		position: absolute;
 		top: 4.5rem;
-		z-index: 2;
+		z-index: var(--navbar-dropdown-z);
 	}
 
 	.navbarDropdownInner {
@@ -57,7 +58,7 @@
 			a:hover + .navbarDropdownDesktopWrapper,
 			a:focus-visible + .navbarDropdownDesktopWrapper {
 				display: flex;
-				z-index: 2;
+				z-index: var(--navbar-button-z);
 			}
 		}
 	}

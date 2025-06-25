@@ -1,0 +1,7 @@
+:root {
+	--button-z: 1;
+	--navbar-z: 10;
+	--navbar-outside-z: 11;
+	--navbar-dropdown-z: 12;
+	--navbar-button-z: 13;
+}

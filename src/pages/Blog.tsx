@@ -2,7 +2,9 @@ const Blog = () => {
 	return (
 		<main>
 			<section>
-				<h1>Blog</h1>
+				<div className="content-block">
+					<h1>Blog</h1>
+				</div>
 			</section>
 		</main>
 	)

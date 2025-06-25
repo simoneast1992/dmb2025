@@ -4,8 +4,10 @@
 	--green-02: #086D44;;
 	--grey-01: #F4F2EF;
 	--grey-02: #EAE6E1;
+	--grey-03: #625E54;
 	--purple-01: #400F8F;
 	--purple-02: #360C78;
+	--purple-03: #3D2B3D;
 	--shadow: #0000001A;
 	--transparent: transparent;
 	--white: #FFF;
@@ -39,4 +41,9 @@
 
 	/* Main */
 	--main-background: var(--grey-01);
+	--main-border: var(--grey-02);
+
+	/* Text */
+	--h1-color: var(--purple-03);
+	--p-color: var(--grey-03);
 }

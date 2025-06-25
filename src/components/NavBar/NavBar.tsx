@@ -44,7 +44,7 @@ const NavBar = ({
 			<img
 				className={styles.navbarLogo}
 				src={DMBLogo}
-				alt="DMB Consulta Service (UK) Logo"
+				alt="DMB Consultant Services (UK) Logo"
 			/>
 			<Button
 				className={styles.navbarButton}

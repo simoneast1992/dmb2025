@@ -16,7 +16,6 @@
 	&:has(svg):has(span) {
 		.buttonLabel {
 			padding: 0.75rem 0.25rem 0.75rem 1.25rem;
-
 		}
 
 		svg {
@@ -25,7 +24,7 @@
 	}
 
 	&:focus-visible {
-		z-index: 1;
+		z-index: var(--button-z);
 		outline: none;
 		border-color: var(--button-border-focus);
 		box-shadow: 0 0 0 4px var(--button-shadow-focus);

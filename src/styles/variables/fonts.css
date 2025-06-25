@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'Lexend';
+	src: url('../../fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Gabarito';
+	src: url('../../fonts/Gabarito-VariableFont_wght.ttf') format('truetype');
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: 900;
+	line-height: 3.25rem;
+	margin-block-end: 1.5rem;
+	color: var(--h1-color);
+}
+
+h2 {
+	font-size: 2.5rem;
+	font-weight: 900;
+	line-height: 3.25rem;
+	margin-block-end: 1.5rem;
+	color: var(--h1-color);
+}
+
+p {
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 1.7;
+	color: var(--p-color);
+}
